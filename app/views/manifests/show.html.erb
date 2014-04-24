@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bo load num:</strong>
+  <%= @manifest.bo_load_num %>
+</p>
+
+<p>
+  <strong>Password digest:</strong>
+  <%= @manifest.password_digest %>
+</p>
+
+<p>
+  <strong>Bo charges:</strong>
+  <%= @manifest.bo_charges %>
+</p>
+
+<p>
+  <strong>Bo debits:</strong>
+  <%= @manifest.bo_debits %>
+</p>
+
+<p>
+  <strong>Bo gear rental:</strong>
+  <%= @manifest.bo_gear_rental %>
+</p>
+
+<p>
+  <strong>Bo rental rig number:</strong>
+  <%= @manifest.bo_rental_rig_number %>
+</p>
+
+<p>
+  <strong>Bo jump type:</strong>
+  <%= @manifest.bo_jump_type %>
+</p>
+
+<p>
+  <strong>Bo aircraft:</strong>
+  <%= @manifest.bo_aircraft %>
+</p>
+
+<p>
+  <strong>Bo pilot:</strong>
+  <%= @manifest.bo_pilot %>
+</p>
+
+<p>
+  <strong>Bo:</strong>
+  <%= @manifest.bo_id %>
+</p>
+
+<%= link_to 'Edit', edit_manifest_path(@manifest) %> |
+<%= link_to 'Back', manifests_path %>

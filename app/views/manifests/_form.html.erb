@@ -1,0 +1,57 @@
+<%= form_for(@manifest) do |f| %>
+  <% if @manifest.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@manifest.errors.count, "error") %> prohibited this manifest from being saved:</h2>
+
+      <ul>
+      <% @manifest.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :bo_load_num %><br>
+    <%= f.number_field :bo_load_num %>
+  </div>
+  <div class="field">
+    <%= f.label :password_digest %><br>
+    <%= f.text_field :password_digest %>
+  </div>
+  <div class="field">
+    <%= f.label :bo_charges %><br>
+    <%= f.text_field :bo_charges %>
+  </div>
+  <div class="field">
+    <%= f.label :bo_debits %><br>
+    <%= f.text_field :bo_debits %>
+  </div>
+  <div class="field">
+    <%= f.label :bo_gear_rental %><br>
+    <%= f.text_field :bo_gear_rental %>
+  </div>
+  <div class="field">
+    <%= f.label :bo_rental_rig_number %><br>
+    <%= f.number_field :bo_rental_rig_number %>
+  </div>
+  <div class="field">
+    <%= f.label :bo_jump_type %><br>
+    <%= f.text_field :bo_jump_type %>
+  </div>
+  <div class="field">
+    <%= f.label :bo_aircraft %><br>
+    <%= f.text_field :bo_aircraft %>
+  </div>
+  <div class="field">
+    <%= f.label :bo_pilot %><br>
+    <%= f.text_field :bo_pilot %>
+  </div>
+  <div class="field">
+    <%= f.label :bo_id %><br>
+    <%= f.number_field :bo_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

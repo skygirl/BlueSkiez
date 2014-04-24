@@ -1,0 +1,53 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  username: MyString
+  password_digest: MyString
+  cust_fname: MyString
+  cust_lname: MyString
+  cust_mi: MyString
+  cust_email: MyString
+  cust_addr: MyString
+  cust_city: MyString
+  cust_zip: 1
+  cust_phone: MyString
+  cust_em_contact: MyString
+  cust_em_contactrel: MyString
+  cust_em_contactphone: MyString
+  cust_dl: MyString
+  cust_dl_state: MyString
+  cust_dl_exp: 2014-04-23
+  cust_status: MyString
+  cust_uspa: MyString
+  cust_uspalicense: MyString
+  cust_reserve_date: 2014-04-23
+  cust_uspa_exp: 2014-04-23
+  cust_cc: 1
+  cust_id: 1
+  cust_waiver_date: 2014-04-23
+
+two:
+  username: MyString
+  password_digest: MyString
+  cust_fname: MyString
+  cust_lname: MyString
+  cust_mi: MyString
+  cust_email: MyString
+  cust_addr: MyString
+  cust_city: MyString
+  cust_zip: 1
+  cust_phone: MyString
+  cust_em_contact: MyString
+  cust_em_contactrel: MyString
+  cust_em_contactphone: MyString
+  cust_dl: MyString
+  cust_dl_state: MyString
+  cust_dl_exp: 2014-04-23
+  cust_status: MyString
+  cust_uspa: MyString
+  cust_uspalicense: MyString
+  cust_reserve_date: 2014-04-23
+  cust_uspa_exp: 2014-04-23
+  cust_cc: 1
+  cust_id: 1
+  cust_waiver_date: 2014-04-23

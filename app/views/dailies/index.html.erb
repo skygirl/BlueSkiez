@@ -1,0 +1,35 @@
+<h1>Listing dailies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mon schedule</th>
+      <th>Password digest</th>
+      <th>Mon load number</th>
+      <th>Mon pilot</th>
+      <th>Cust</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dailies.each do |daily| %>
+      <tr>
+        <td><%= daily.mon_schedule %></td>
+        <td><%= daily.password_digest %></td>
+        <td><%= daily.mon_load_number %></td>
+        <td><%= daily.mon_pilot %></td>
+        <td><%= daily.cust_id %></td>
+        <td><%= link_to 'Show', daily %></td>
+        <td><%= link_to 'Edit', edit_daily_path(daily) %></td>
+        <td><%= link_to 'Destroy', daily, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Daily', new_daily_path %>

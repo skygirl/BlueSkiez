@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Mon schedule:</strong>
+  <%= @daily.mon_schedule %>
+</p>
+
+<p>
+  <strong>Password digest:</strong>
+  <%= @daily.password_digest %>
+</p>
+
+<p>
+  <strong>Mon load number:</strong>
+  <%= @daily.mon_load_number %>
+</p>
+
+<p>
+  <strong>Mon pilot:</strong>
+  <%= @daily.mon_pilot %>
+</p>
+
+<p>
+  <strong>Cust:</strong>
+  <%= @daily.cust_id %>
+</p>
+
+<%= link_to 'Edit', edit_daily_path(@daily) %> |
+<%= link_to 'Back', dailies_path %>

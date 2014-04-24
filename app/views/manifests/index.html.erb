@@ -1,0 +1,45 @@
+<h1>Listing manifests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Bo load num</th>
+      <th>Password digest</th>
+      <th>Bo charges</th>
+      <th>Bo debits</th>
+      <th>Bo gear rental</th>
+      <th>Bo rental rig number</th>
+      <th>Bo jump type</th>
+      <th>Bo aircraft</th>
+      <th>Bo pilot</th>
+      <th>Bo</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @manifests.each do |manifest| %>
+      <tr>
+        <td><%= manifest.bo_load_num %></td>
+        <td><%= manifest.password_digest %></td>
+        <td><%= manifest.bo_charges %></td>
+        <td><%= manifest.bo_debits %></td>
+        <td><%= manifest.bo_gear_rental %></td>
+        <td><%= manifest.bo_rental_rig_number %></td>
+        <td><%= manifest.bo_jump_type %></td>
+        <td><%= manifest.bo_aircraft %></td>
+        <td><%= manifest.bo_pilot %></td>
+        <td><%= manifest.bo_id %></td>
+        <td><%= link_to 'Show', manifest %></td>
+        <td><%= link_to 'Edit', edit_manifest_path(manifest) %></td>
+        <td><%= link_to 'Destroy', manifest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Manifest', new_manifest_path %>

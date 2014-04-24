@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bo_load_num: 1
+  password_digest: MyString
+  bo_charges: 1.5
+  bo_debits: 1.5
+  bo_gear_rental: 1.5
+  bo_rental_rig_number: 1
+  bo_jump_type: MyString
+  bo_aircraft: MyString
+  bo_pilot: MyString
+  bo_id: 1
+
+two:
+  bo_load_num: 1
+  password_digest: MyString
+  bo_charges: 1.5
+  bo_debits: 1.5
+  bo_gear_rental: 1.5
+  bo_rental_rig_number: 1
+  bo_jump_type: MyString
+  bo_aircraft: MyString
+  bo_pilot: MyString
+  bo_id: 1
