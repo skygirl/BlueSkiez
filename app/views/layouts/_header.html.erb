@@ -1,26 +1,41 @@
-
-<div style="background-color:#007ACC;" id="header">
-<table>	
-	<div id="main_navigation" style="background-color:#007ACC">	
-		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-  		<div class="container form-inline">
-    		<div class="navbar-header">
-      			<a class="navbar-brand" href="/">Blue Skiez DZ Management</a>
-    		</div>
-    		<div class="collapse navbar-collapse">
-      			<ul class="nav navbar-nav">
-        			<li class="active"><a <%= link_to 'Home', home_index_path %> </a></li>
-        			<li class="active"><a <%= link_to 'Contact Us', home_contact_path %> </a></li>
-        			<li class="active"><a <%= link_to 'About Us', home_about_path %> </a></li>
-        			<li class="active"><a <%= link_to 'Customers', customers_path %> </a></li>
-        			<li class="active"><a <%= link_to 'Manifest', manifests_path %> </a></li>
-        			<li class="active"><a <%= link_to 'Daily', dailies_path %> </a></li>
-      			</ul>
-    		</div>
-
-  		</div>
-		</nav>	
-    	<%= image_tag("sd_emboss.jpg", :alt=>"logo", :width=>100, :height=>100) %>
-	</div>		
+<div class="row" style="margin-top:10px; padding-left:15px; padding-right:15px">
+    <div class="col-md-6">
+      <%=  link_to image_tag("sd_emboss.jpg", :size=>'50x50') %>  
+    </div>
+    <div class="col-md-6">
+        <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Search">
+            </div> <!-- closes form-group -->
+                <button type="submit" class="btn btn-info">Search</button>
+          </form> 
+    </div><!--closes col-md-6-->
+</div><!--closes class -->
+    
+<table> 
+  <div id="main_navigation" style="background-color:#007ACC"> 
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+      <div class="container form-inline">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Blue Skiez DZ Management</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a <%= link_to 'Home', home_index_path %> </a></li>
+              <li class="active"><a <%= link_to 'Contact Us', home_contact_path %> </a></li>
+              <li class="active"><a <%= link_to 'About Us', home_about_path %> </a></li>
+              <li class="active"><a <%= link_to 'Customers', customers_path %> </a></li>
+              <li class="active"><a <%= link_to 'Manifest', manifests_path %> </a></li>
+              <li class="active"><a <%= link_to 'Daily', dailies_path %> </a></li>
+            </ul>
+        </div>
+      </div>
+    </nav>  
+  </div>    
 </table>
-</div>

@@ -35,6 +35,9 @@ group :doc do
 gem 'bcrypt', '~> 3.1.7'
 end
 
+#Twitter Bootstrap
+#gem 'less-rails-bootstrap'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
