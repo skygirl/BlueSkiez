@@ -1,21 +1,22 @@
 class Customer < ActiveRecord::Base
 
+attr_accessible :cust_address1, :cust_city, :cust_email, :cust_fname, :cust_lname, :cust_phone, :cust_zip, :password, :password_confirmation, :username
+
+
+
 validates :cust_fname, :presence => true
 validates :cust_lname, :presence => true
-validates :cust_fname, :presence => true
 validates :cust_email, :presence => true
-validates :cust_city, :presence => true
-validates :cust_zip, :presence => true
-validates :cust_zip, numericality: true
 validates :cust_phone, :presence => true
-validates :cust_em_contact, :presence => true
-validates :cust_em_contactrel, :presence => true
-validates :cust_em_contactphone, :presence => true
-validates :cust_dl, :presence => true
-validates :cust_dl_state, :presence => true
-validates :cust_dl_exp, :presence => true
-validates :cust_status, :presence => true
-validates :cust_id, :presence => true
-validates :cust_waiver_date, :presence => true
+validates :username, :presence => true, :uniqueness => true 
+has_secure_password
 
-end
+
+	def cust_name
+		cust_lname + ", " + cust_fname
+		end
+
+has_many :sale, dependent:  :destroy
+	end
+
+	

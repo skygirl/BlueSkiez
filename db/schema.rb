@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140424023351) do
+ActiveRecord::Schema.define(version: 20140531203842) do
 
   create_table "customers", force: true do |t|
     t.string   "username"
@@ -63,6 +63,27 @@ ActiveRecord::Schema.define(version: 20140424023351) do
     t.string   "bo_aircraft"
     t.string   "bo_pilot"
     t.integer  "bo_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "promotions", force: true do |t|
+    t.string   "title"
+    t.string   "Description"
+    t.string   "ImagePath"
+    t.date     "StartDate"
+    t.date     "EndDate"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sales", force: true do |t|
+    t.integer  "cust_id"
+    t.string   "SaleType"
+    t.date     "sale_date"
+    t.float    "gear_rental"
+    t.float    "Sale_price"
+    t.integer  "bo_load_num"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

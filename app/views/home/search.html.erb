@@ -1,0 +1,36 @@
+<p> <h1>Search</h1> </p>
+<div class="dark">
+<%= form_tag  :controller => 'home', :action => 'search' do %>
+	<p>What is Customer's last name: 
+	<%= text_field_tag 'custname', @custname %> </p>
+	<hr>
+	<% if @results>0 %>
+		<% if @custlist.length >0 %>
+			<p> Here is the search results:</p>
+			<p>
+			<table>
+			<tr>
+				<th>Name</th> &nbsp
+				<th>Phone</th>&nbsp
+				<th>City</th>&nbsp
+				<th>Email</th>&nbsp	
+			</tr>
+			<% @custlist.each do |c| %>
+				<tr>
+				<td><%= link_to c.cust_name, customer_path(c.id) %></td>&nbsp
+				<td><%= number_to_phone(c.cust_phone) %></td>&nbsp
+				<td><%= link_to c.cust_city %></td>&nbsp
+				<td><%= link_to c.cust_email %></td></hr>
+				</tr>
+			<% end %>
+			</p>
+			</table>
+
+		<% else%>
+			<p>There was an error in retrieving data. Try again!</p>
+		<% end %>
+	<% end %>
+
+	<%= submit_tag 'Send' %>
+<% end %>
+</div>

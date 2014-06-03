@@ -1,9 +1,34 @@
-
+<p>
+The date/time is now <%= @time %>
+</p>
 
 <%= link_to "Contact", home_contact_path %>
 <%= link_to 'About Us', home_about_path %> </a></li>
 <%= link_to 'Customers', customers_path %> </a></li>
 <%= link_to 'Manifest', manifests_path %> </a></li>
+<%= link_to 'Promotions', promotions_path %> </a></li>
 <%= link_to 'Daily', dailies_path %> </a></li><br> <br>
+<%= link_to 'Sale', sales_path %> </a></li><br> <br>
+
+
 <h5>This is a place holder video - more complete page will be added soon</h5>
-<iframe src="//player.vimeo.com/video/75921797" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/75921797">Skydiving 2013 year to date</a> from <a href="http://vimeo.com/user10907249">Maytee</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+<iframe src="//player.vimeo.com/video/75921797" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/75921797">Skydiving 2013 year to date</a> from <a href="http://vimeo.com/user10907249">Maytee</a> on <a href="https://vimeo.com">Vimeo</a></p>
+<div id="promote">
+<table border=1 align=right>
+	<tr>
+		<td>
+			<h3>BlueSkiez Promo</h5>
+		</td>
+		<td>
+			<% @promolist.each do |p| %>
+				<em><%= p.title %><em><br>
+				<%= p.Description %><br>
+				<%= image_tag p.ImagePath %><br>
+				<%= p.EndDate %>
+				<hr>
+			<% end %>
+		</td>
+	</tr>
+</table>
+</div>
+

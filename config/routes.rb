@@ -1,4 +1,15 @@
 Blueskies::Application.routes.draw do
+  resources :sales
+
+  get "community/index"
+  get "home/search"
+  post "home/search"
+
+  get "home/custlist"
+  post "home/custlist"
+  
+  resources :promotions
+
   resources :dailies
 
   resources :manifests
@@ -11,6 +22,18 @@ Blueskies::Application.routes.draw do
   get "manifests/index"
   get "dailies/index"
   get "customers/index"
+  get "home/announcement"
+  get "home/conditions"
+  get "home/privacy"
+  get "home/site_map"
+  get "home/support"
+  get "promotion/index"
+  post "promotion/index"
+  get "promotion/show"
+  post "promotion/show"
+  get "sale/show"
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

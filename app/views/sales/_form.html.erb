@@ -1,0 +1,43 @@
+<%= form_for(@sale) do |f| %>
+  <% if @sale.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sale.errors.count, "error") %> prohibited this sale from being saved:</h2>
+
+      <ul>
+      <% @sale.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cust_id %><br />
+    <%= f.select :cust_id, @customer_choice %>
+  </div><br>
+
+  </div>
+  <div class="field" style="padding-left:320px">
+    <%= f.label :SaleType %><br>
+    <%= f.text_field :SaleType %>
+  </div>
+  <div class="field" style="padding-left:320px">
+    <%= f.label :sale_date %><br>
+    <%= f.date_select :sale_date %>
+  </div>
+  <div class="field" style="padding-left:320px">
+    <%= f.label :gear_rental %><br>
+    <%= f.text_field :gear_rental %>
+  </div>
+  <div class="field" style="padding-left:320px">
+    <%= f.label :Sale_price %><br>
+    <%= f.text_field :Sale_price %>
+  </div>
+  <div class="field" style="padding-left:320px">
+    <%= f.label :bo_load_num %><br>
+    <%= f.number_field :bo_load_num %>
+  </div>
+  <div class="actions" style="padding-left:320px">
+    <%= f.submit %>
+  </div>
+<% end %>
