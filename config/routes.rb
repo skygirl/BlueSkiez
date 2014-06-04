@@ -1,4 +1,5 @@
 Blueskies::Application.routes.draw do
+  devise_for :users
   resources :sales
 
   get "community/index"

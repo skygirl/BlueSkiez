@@ -1,4 +1,5 @@
 class DailiesController < ApplicationController
+  before_filter :authenticate_user!, :except => [:show, :index]
   before_action :set_daily, only: [:show, :edit, :update, :destroy]
 
   # GET /dailies

@@ -1,4 +1,5 @@
 class SalesController < ApplicationController
+  before_filter :authenticate_user!, :except => [:show, :index]
   before_action :set_sale, only: [:show, :edit, :update, :destroy]
 
   # GET /sales
