@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
    <%= render "layouts/header" %>
 </head>
-
+<div id="body1">
 <body>
 	<% if user_signed_in? %>
   			Logged in as <strong><%= current_user.email %></strong>.
@@ -27,7 +27,7 @@
   <%= yield %>
 </div> <!-- closes container div -->
 		<%= render "layouts/footer" %>
-</div>
+</div><!--closes body1 div -->  
 
 </body>
 </html>
